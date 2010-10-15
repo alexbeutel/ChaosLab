@@ -1,0 +1,139 @@
+\documentclass[12pt]{report}
+
+\usepackage{amsmath} % loads AMS-Math package
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{epsfig} % allows PostScript files
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{listings} % allows lstlisting environment
+\usepackage{moreverb} % allows listinginput environment
+\usepackage{vmargin} % allows better margins
+\usepackage{color}
+\setpapersize{USletter} % sets the paper size
+\allowdisplaybreaks[1]
+\setmarginsrb{1in}{0.7in}{1in}{1in}{12pt}{11mm}{0pt}{11mm} %sets margins
+
+
+\title{\LaTeX \ Title }
+
+\author{Alex Beutel  \\
+{\small\em \copyright \  Draft date \today }}
+
+ \date{ }
+
+ %\abstract{Some bullshit}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+	blah blah blah
+\end{abstract}
+ %\addcontentsline{toc}{chapter}{Contents}
+\pagenumbering{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\pagestyle{headings}
+\pagenumbering{arabic}
+
+\pagestyle{plain}
+
+\chapter{Introduction}
+
+\chapter{Chaos Theory}
+
+\chapter{Experimental Setup}
+
+\chapter{Results}
+
+\section{Data Analysis} % (fold)
+\label{sec:Data Analysis}
+
+% section Data Analysis (end)
+
+\section{Error Analysis} % (fold)
+\label{sec:Error Analysis}
+
+% section Error Analysis (end)
+
+\chapter{Simulations} % (fold)
+\label{ch:Simulations}
+
+% section Simulations (end)
+
+	\begin{figure}[h]
+		\centering
+		\input{plots/100khz}
+		\label{fig:100khzBifurcation}
+		\caption{100 kHz Bifurcation}
+	\end{figure}
+	
+	\begin{figure}[h]
+		\centering
+		\input{plots/80khz}
+	\end {figure}
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics{plots/general.pdf}
+	\end{figure}
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics{simulations/circuit.png}
+	\end{figure}
+
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\input{data/80khz} 
+    \end{tabular}
+
+	\begin{table}
+		\centering
+		\begin{tabular}{|l|l|l|l||l|l|l|l|}
+			\hline
+			\input{data/100khz.2} 
+		\end{tabular}
+		\label{tab:100khz}
+		\caption{Data for Bifurcation plot, 100 kHz}
+	\end{table}
+
+    %\pagebreak
+
+	\begin{table}
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\input{zach-data/feigenbaum} 
+		\end{tabular}
+		\label{tab:fegeinbaum}
+		\caption{Stuff}
+	\end{table}
+
+	\begin{table}
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\input{zach-data/chaos3} 
+		\end{tabular}
+		\label{tab:chaos3}
+		\caption{Some data}
+	\end{table}
+
+	\begin{table}
+		\centering
+		\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
+			\hline
+			\input{zach-data/chaos2} 
+		\end{tabular}
+		\label{tab:chaos2}
+		\caption{Some more data}
+	\end{table}
+
+\chapter*{Appendix}
+
+	\end{document}
+
