@@ -1,0 +1,25 @@
+#set term postscript eps #color blacktext "Times-Roman" 24 size 5,3
+#set output 'plots/100khz.eps'
+
+set terminal latex
+set output 'plots/80khz.tex'
+
+set datafile missing "-"
+set style data points
+
+#set xrange [12:24]
+#set yrange [60:150]
+
+set ylabel 'V$_{\rm resistor}$\\(mV)' rotate by 90 left
+set xlabel 'V$_{\rm drive}$ (mV)'
+set title 'Bifurcation for 80khz'
+
+#set offset graph 0.1, graph 0.1, graph 0.1, graph 0.1 
+set offset 0.1, 0.1, 0.1, 0.1 
+
+set nokey
+set size 1,1
+# good points: squares - 4,5
+plot 'data/80khz-bifurcation.csv' using 1:2 pt 0
+#using 2:xtic(1) ti col lt rgb "red", '' u 3 ti col lt rgb "green", '' u 4 ti col lt rgb "blue"
+

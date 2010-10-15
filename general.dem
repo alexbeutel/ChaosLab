@@ -1,0 +1,25 @@
+set term postscript eps #color blacktext "Times-Roman" 24 size 5,3
+set output 'plots/general.eps'
+#
+#set terminal latex
+#set output 'plots/general.tex'
+
+set datafile missing "-"
+set style data linespoints
+
+#set xrange [12:24]
+#set yrange [60:150]
+
+set ylabel 'Frequency (kHz)' rotate by 90 left
+set xlabel 'Driving Voltage (mV)'
+set title 'Period Doubling Diagram'
+
+set offset 0.1, 0.1, 0.1, 0.1 
+
+#set nokey
+#set key 5,45
+set size 1.35,1
+set key outside right
+set key title "Period Doublings"
+plot 'data/general.csv' using 2:xtic(1) ti col lt rgb "red", '' u 3 ti col lt rgb "green", '' u 4 ti col lt rgb "blue", '' u 5 ti col lt rgb "orange", '' u 6 ti col lt rgb "purple", '' u 7 ti col lt rgb "yellow", '' u 8 ti col lt rgb "cyan", '' u 9 ti col lt rgb "magenta"            
+#plot 'data/general.csv' using 2:xtic(1) ti col lt rgb "red", '' u 3 ti col lt rgb "green", '' u 4 ti col lt rgb "blue", '' u 8 ti col lt rgb "orange", '' u 5 ti col lt rgb "purple", '' u 6 ti col lt rgb "yellow", '' u 7 ti col lt rgb "cyan", '' u 9 ti col lt rgb "magenta"
