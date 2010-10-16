@@ -12,7 +12,7 @@ set style data points
 
 set ylabel 'V$_{\rm resistor}$\\(mV)' rotate by 90 left
 set xlabel 'V$_{\rm drive}$ (mV)'
-set title 'Bifurcation for 100khz'
+#set title 'Bifurcation for 100khz'
 
 #set offset graph 0.1, graph 0.1, graph 0.1, graph 0.1 
 set offset 0.1, 0.1, 0.1, 0.1 
