@@ -47,38 +47,39 @@
 
 \chapter{Chaos Theory}
 
+\section{Nonlinear Dynamics}
+\label{sec: Nonlinear Dynamics}
+\input{writing/nonlinearDynamics}
+
+\section{Chaos ``Proof"}
+\label{sec: Chaos ``Proof"}
+\input{writing/chaosProof}
+
+\section{Nonlinear Methods}
+\label{sec: Nonlinear Methods}
+\input{writing/nonlinearMethods}
+
 \chapter{Experimental Setup}
+
+\section{RL Diode Circuit}
+\label{sec:RL Diode Circuit}
+\input{writing/RLDiodeCircuit}
+
+\section{Picoscope}
+\label{sec:Picoscope}
+\input{writing/picoscope}
+
+\section{Oscilloscope}
+\label{sec:Oscilloscope}
+\input{writing/oscilloscope}
+
+\chapter{Experimental Procedure}
+\input{writing/experimentalProcedure}
 
 \chapter{Results}
 
 \section{Data Analysis} % (fold)
 \label{sec:Data Analysis}
-
-% section Data Analysis (end)
-
-\section{Error Analysis} % (fold)
-\label{sec:Error Analysis}
-
-% section Error Analysis (end)
-
-\chapter{Simulations} % (fold)
-\label{ch:Simulations}
-
-% section Simulations (end)
-
-	\begin{figure}[h]
-		\centering
-		\input{plots/100khz}
-		\label{fig:100khzBifurcation}
-		\caption{100 kHz Bifurcation plot}
-	\end{figure}
-	
-	\begin{figure}[h]
-		\centering
-		\input{plots/80khz}
-		\label{fig:80khzBifurcation}
-		\caption{80 kHz Bifurcation plot}
-	\end{figure}
 
 	\begin{figure}[h]
 		\centering
@@ -87,10 +88,71 @@
 		\caption{Period Doubling}
 	\end{figure}
 
+\input{writing/periodDoubling}
+
+	\begin{figure}[h]
+		\centering
+		\input{plots/80khz}
+		\label{fig:80khzBifurcation}
+		\caption{80 kHz Bifurcation plot. $V_{drive}$ error: 0.1 V. $V_{R}$ error: 5 mV.}
+	\end{figure}
+
+	\begin{figure}[h]
+		\centering
+		\input{plots/100khz}
+		\label{fig:100khzBifurcation}
+		\caption{100 kHz Bifurcation plot. $V_{drive}$ error: 0.1 V. $V_{R}$ error: 5 mV.}
+	\end{figure}
+	
+\input{writing/bifurcationPlots}
+	
+	\begin{table}
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\input{zach-data/feigenbaum} 
+		\end{tabular}
+		\label{tab:fegeinbaum}
+		\caption{Final averaged Feigenbaum ratios}
+	\end{table}
+	
+	\begin{figure}
+		\centering
+		\includegraphics{Pics/Bifurcation Diagram.png}
+		\label{fig: Calculating Feigenbaum ratios}
+		\caption{Calculating Feigenbaum ratios}
+	\end{figure}
+	
+\input{writing/finalFeigenbaumRatios}
+
+% section Data Analysis (end)
+
+\section{Error Analysis} % (fold)
+\label{sec:Error Analysis}
+\input{writing/errorAnalysis}
+
+% section Error Analysis (end)
+
+\chapter{Simulations} % (fold)
+\label{ch:Simulations}
+
 	\begin{figure}[h]
 		\centering
 		\includegraphics{simulations/circuit.png}
+		\label{fig: Simulation Bifurcation Diagram}
+		\caption{Simulation Bifurcation Diagram}
 	\end{figure}
+	
+\input{writing/simulationExplanation}
+
+% section Simulations (end)
+
+    %\pagebreak
+
+\chapter*{Appendix}
+
+\section{Data}
+\label{sec:Data}
 
 	\begin{table}
 		\centering
@@ -112,18 +174,6 @@
 		\caption{Data for Bifurcation plot, 100 kHz}
 	\end{table}
 
-    %\pagebreak
-
-	\begin{table}
-		\centering
-		\begin{tabular}{|c|c|c|c|c|}
-			\hline
-			\input{zach-data/feigenbaum} 
-		\end{tabular}
-		\label{tab:fegeinbaum}
-		\caption{Stuff}
-	\end{table}
-
 	\begin{table}
 		\centering
 		\begin{tabular}{|c|c|c|c|c|}
@@ -131,20 +181,31 @@
 			\input{zach-data/chaos3} 
 		\end{tabular}
 		\label{tab:chaos3}
-		\caption{Some data}
+		\caption{Five trials at 10.4 V. Frequency varied.}
 	\end{table}
 
 	\begin{table}
 		\centering
 		\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
 			\hline
-			\input{zach-data/chaos2} 
+			\input{zach-data/chaos2_1} 
 		\end{tabular}
 		\label{tab:chaos2}
-		\caption{Some more data}
+		\caption{Five trials at 80 kHz. Voltage varied.}
+	\end{table}
+	
+	\begin{table}
+		\centering
+		\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
+			\hline
+			\input{zach-data/chaos2_2} 
+		\end{tabular}
+		\label{tab:chaos2}
+		\caption{Five trials at 120 kHz. Voltage varied.}
 	\end{table}
 
-\chapter*{Appendix}
+\section{Code}
+\label{sec: Code}
 
 	\end{document}
 
