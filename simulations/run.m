@@ -20,10 +20,12 @@ global C1 C2 R1 L1 f E0 nu
 for j=1:((numax-nuinit)/nuinc)
     [T,Y] = ode45(@ode1,[10^-4,100.0*10^-4],[0,0]);
     plot(nu * sin(2*pi*f*T(200:600)),Y(200:600,2)*R1)
-    ti = sprintf('Nu=%6.3f', nu);
-    fi = sprintf('plots2/plot.nu.%6.3f.png', nu);
-    title(ti)
-    print('-dpng', fi)
+    %ti = sprintf('Nu=%6.3f', nu);
+    fi = sprintf('plots3/plot.nu.%6.3f.pdf', nu);
+    %title(ti)
+    xlabel('Driving voltage')
+    ylabel('Voltage across the resistor')
+    print('-dpdf', fi)
     nu = nu + nuinc;
 end
 % plot(nu * sin(2*pi*f*T(:)),Y(:,2)*R1)
