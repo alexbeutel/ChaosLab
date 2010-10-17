@@ -23,8 +23,6 @@
 
  \date{ }
 
- %\abstract{Some bullshit}
-
 \begin{document}
 
 \maketitle
@@ -95,8 +93,8 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics{plots/general.pdf}
-		\label{fig:periodDoubling}
 		\caption{Period Doubling}
+		\label{fig:periodDoubling}
 	\end{figure}
 
 \input{writing/periodDoubling}
@@ -104,15 +102,15 @@
 	\begin{figure}[h]
 		\centering
 		\input{plots/80khz}
-		\label{fig:80khzBifurcation}
 		\caption{80 kHz Bifurcation plot. $V_{\rm drive}$ error: 0.1 V. $V_{\rm R}$ error: 5 mV.}
+		\label{fig:80khzBifurcation}
 	\end{figure}
 
 	\begin{figure}[h]
 		\centering
 		\input{plots/100khz}
-		\label{fig:100khzBifurcation}
 		\caption{100 kHz Bifurcation plot. $V_{\rm drive}$ error: 0.1 V. $V_{\rm R}$ error: 5 mV.}
+		\label{fig:100khzBifurcation}
 	\end{figure}
 	
 \input{writing/bifurcationPlots}
@@ -123,10 +121,20 @@
 			\hline
 			\input{zach-data/feigenbaum} 
 		\end{tabular}
-		\label{tab:fegeinbaum}
 		\caption{Final averaged Feigenbaum ratios}
+		\label{tab:fegeinbaum}
 	\end{table}
 	
+<<<<<<< HEAD
+=======
+	\begin{figure}
+		\centering
+		\includegraphics{Pics/Bifurcation Diagram.jpg}
+		\caption{Calculating Feigenbaum ratios}
+		\label{fig: Calculating Feigenbaum ratios}
+	\end{figure}
+	
+>>>>>>> f239c0be83a317886cced8b98a4d65940305855e
 \input{writing/finalFeigenbaumRatios}
 
 % section Data Analysis (end)
@@ -147,28 +155,35 @@
 \chapter{Simulations} % (fold)
 \label{ch:Simulations}
 
+\input{writing/simulationExplanation}
+
 	\begin{figure}[h]
 		\centering
 		\includegraphics{simulations/circuit.png}
-		\label{fig: Simulation Bifurcation Diagram}
 		\caption{Simulation Bifurcation Diagram}
+		\label{fig: Simulation Bifurcation Diagram}
 	\end{figure}
 
 	\begin{figure}
 		\centering
 		\includegraphics{simulations/plotnu0120.png}
-		\label{fig:sim.0120}
 		\caption{Simulation with $\nu=0.120$}
+		\label{fig:sim.0120}
 	\end{figure}
 	
 	\begin{figure}
 		\centering
 		\includegraphics{simulations/plotnu0390.png}
-		\label{fig:sim.0390}
 		\caption{Chaos at $\nu=0.390$}
+		\label{fig:sim.0390}
 	\end{figure}
 
-\input{writing/simulationExplanation}
+	\begin{figure}
+		\centering
+		\includegraphics{simulations/plotnu0460.png}
+		\caption{Simulation at $\nu=0.460$}
+		\label{fig:sim.0460}
+	\end{figure}
 
 % section Simulations (end)
 
@@ -179,54 +194,54 @@
 \section{Data}
 \label{sec:Data}
 
-	\begin{table}
+	\begin{table}[h]
 		\centering
 		\begin{tabular}{|l|l|l||l|l|l|}
 			\hline
 			\input{data/80khz.2} 
 		\end{tabular}
-		\label{tab:80khz}
 		\caption{Data for Bifurcation plot, 80 kHz}
+		\label{tab:80khz}
 	\end{table}
 
-	\begin{table}
+	\begin{table}[h]
 		\centering
 		\begin{tabular}{|l|l|l|l||l|l|l|l|}
 			\hline
 			\input{data/100khz.2} 
 		\end{tabular}
-		\label{tab:100khz}
 		\caption{Data for Bifurcation plot, 100 kHz}
+		\label{tab:100khz}
 	\end{table}
 
-	\begin{table}
+	\begin{table}[h]
 		\centering
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
 			\input{zach-data/chaos3} 
 		\end{tabular}
-		\label{tab:chaos3}
 		\caption{Five trials at 10.4 V. Frequency varied.}
+		\label{tab:chaos3}
 	\end{table}
 
-	\begin{table}
+	\begin{table}[h] 
 		\centering
 		\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
 			\hline
 			\input{zach-data/chaos2_1} 
 		\end{tabular}
-		\label{tab:chaos2}
 		\caption{Five trials at 80 kHz. Voltage varied.}
+		\label{tab:chaos2}
 	\end{table}
 	
-	\begin{table}
+	\begin{table}[h]
 		\centering
 		\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
 			\hline
 			\input{zach-data/chaos2_2} 
 		\end{tabular}
-		\label{tab:chaos2}
 		\caption{Five trials at 120 kHz. Voltage varied.}
+		\label{tab:chaos2}
 	\end{table}
 
 \section{Code}
@@ -243,8 +258,8 @@ dy(1) = y(2);
 dy(2) = (-R1*y(2)-( (C2-C1)/(2*C2*C1)*abs(y(1))+ (C1+C2)/(2*C1*C2)*y(1)+E0)
 	+ nu * sin(2*pi*f*t))/L1;
 \end{lstlisting}
-\label{code:ode}
 \caption{Code for RL circuit ODE}
+\label{code:ode}
 \end{figure}
 
 \begin{figure}[h]
@@ -266,16 +281,19 @@ nu = nuinit;
 for j=1:((numax-nuinit)/nuinc)
     [T,Y] = ode45(@ode1,[10^-4,100.0*10^-4],[0,0]);
     plot(nu * sin(2*pi*f*T(200:600)),Y(200:600,2)*R1)
-    ti = sprintf('Nu=%6.3f', nu);
-    fi = sprintf('plots2/plot.nu.%6.3f.png', nu);
-    title(ti)
-    print('-dpng', fi)
+    fi = sprintf('plots2/plot.nu.%6.3f.pdf', nu);
+    print('-dpdf', fi)
     nu = nu + nuinc;
 end
 \end{lstlisting}
-	\label{code:run}
 	\caption{Code for iterating through parameters of RL circuit}
+	\label{code:run}
 \end{figure}
+
+
+
+% citations:
+% http://reference.wolfram.com/legacy/v5_2/Demos/Notebooks/ChaoticCircuit.html
 
 
 \end{document}
