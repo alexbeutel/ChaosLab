@@ -10,7 +10,7 @@ set style data points
 #set xrange [12:24]
 #set yrange [60:150]
 
-set ylabel 'V$_{\rm resistor}$\\(mV)' rotate by 90 left
+set ylabel 'V$_{\rm R}$\\(mV)' rotate by 90 left
 set xlabel 'V$_{\rm drive}$ (mV)'
 #set title 'Bifurcation for 100khz'
 
