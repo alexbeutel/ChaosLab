@@ -59,6 +59,10 @@
 \label{sec: Nonlinear Methods}
 \input{writing/nonlinearMethods}
 
+\section{Feigenbaum Ratios}
+\label{sec: Feigenbaum Ratios}
+\input{writing/feigenbaumRatios}
+
 \chapter{Experimental Setup}
 
 \section{RL Diode Circuit}
@@ -76,6 +80,12 @@
 \chapter{Experimental Procedure}
 \input{writing/experimentalProcedure}
 
+	\begin{figure}
+		\centering
+		\includegraphics{Pics/Bifurcation Diagram.jpg}
+		\label{fig: Calculating Feigenbaum ratios}
+		\caption{Calculating Feigenbaum ratios}
+	\end{figure}
 \chapter{Results}
 
 \section{Data Analysis} % (fold)
@@ -116,20 +126,20 @@
 		\caption{Final averaged Feigenbaum ratios}
 	\end{table}
 	
-	\begin{figure}
-		\centering
-		\includegraphics{Pics/Bifurcation Diagram.jpg}
-		\label{fig: Calculating Feigenbaum ratios}
-		\caption{Calculating Feigenbaum ratios}
-	\end{figure}
-	
 \input{writing/finalFeigenbaumRatios}
 
 % section Data Analysis (end)
 
 \section{Error Analysis} % (fold)
 \label{sec:Error Analysis}
-\input{writing/errorAnalysis}
+
+\subsection{Random Error}
+\label{subsec: Random Error}
+\input{writing/randomErrorAnalysis}
+
+\subsection{Systematic Error}
+\label{subsec: Systematic Error}
+\input{writing/systematicErrorAnalysis}
 
 % section Error Analysis (end)
 
