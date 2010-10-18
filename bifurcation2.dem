@@ -11,7 +11,7 @@ set style data points
 #set yrange [60:150]
 
 set ylabel 'V$_{\rm R}$\\(mV)' rotate by 90 left
-set xlabel 'V$_{\rm drive}$ (mV)'
+set xlabel 'V$_{\rm drive}$ (V)'
 #set title 'Bifurcation for 100khz'
 
 #set offset graph 0.1, graph 0.1, graph 0.1, graph 0.1 
