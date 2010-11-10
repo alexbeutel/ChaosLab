@@ -10,8 +10,8 @@ set style data linespoints
 #set xrange [12:24]
 #set yrange [60:150]
 
-set ylabel 'Frequency (kHz)' rotate by 90 left
-set xlabel 'Driving Voltage (mV)'
+set xlabel 'Frequency (kHz)' rotate by 90 left
+set ylabel 'Driving Voltage (V)'
 #set title 'Period Doubling Diagram'
 
 set offset 0.1, 0.1, 0.1, 0.1 
