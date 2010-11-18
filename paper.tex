@@ -12,6 +12,7 @@
 \usepackage{color}
 \usepackage{mcode}
 \usepackage{hyperref}
+\usepackage{longtable}
 \setpapersize{USletter} % sets the paper size
 \allowdisplaybreaks[1]
 \setmarginsrb{1in}{0.7in}{1in}{1in}{12pt}{11mm}{0pt}{11mm} %sets margins
@@ -234,25 +235,37 @@
 		\label{tab:chaos3.10.4}
 	\end{table}
 
-	\begin{table}[h] 
-		\centering
-		\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+	%\begin{table}[h] 
+		%\centering
+		%\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+		\begin{center}
+		\begin{longtable}{|l|l|l|l|l|l|l|l|l|l|}
 			\hline
 			\input{zach-data/chaos2_1} 
-		\end{tabular}
-		\caption{Five trials at 80 kHz. Voltage varied.}
-		\label{tab:chaos2.80khz}
-	\end{table}
+			\caption{Five trials at 80 kHz. Voltage varied.}
+			\label{tab:chaos2.80khz}
+		\end{longtable}
+		\end{center}
+		%\end{tabular}
+		%\caption{Five trials at 80 kHz. Voltage varied.}
+		%\label{tab:chaos2.80khz}
+	%\end{table}
 	
-	\begin{table}[h]
-		\centering
-		\begin{tabular}{|l|l|l|l|l|l|l|}
-			\hline
-			\input{zach-data/chaos2_2} 
-		\end{tabular}
-		\caption{Five trials at 120 kHz. Voltage varied.}
-		\label{tab:chaos2.100khz}
-	\end{table}
+	%\begin{table}[h]
+		%\centering
+		%\begin{tabular}{|l|l|l|l|l|l|l|}
+		\begin{center}
+			\begin{longtable}{|l|l|l|l|l|l|l|}
+				\hline
+				\input{zach-data/chaos2_2} 
+				\caption{Five trials at 120 kHz. Voltage varied.}
+				\label{tab:chaos2.100khz}
+			\end{longtable}
+		\end{center}
+		%\end{tabular}
+		%\caption{Five trials at 120 kHz. Voltage varied.}
+		%\label{tab:chaos2.100khz}
+	%\end{table}
 
 \section{Code}
 \label{sec: Code}
