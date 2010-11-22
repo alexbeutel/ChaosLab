@@ -60,12 +60,12 @@
 \label{sec:RL Diode Circuit}
 \input{writing/RLDiodeCircuit}
 
-%\begin{figure}
-	%\centering
-	%\includegraphics{Pics/circuit.png}
-	%\caption{An RL Diode Circuit}
-	%\label{fig:circuit}
-%\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics{Pics/circuit.png}
+	\caption{An RL Diode Circuit}
+	\label{fig:circuit}
+\end{figure}
 
 \section{Picoscope}
 \label{sec:Picoscope}
@@ -87,7 +87,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics{plots/general.pdf}
-		\caption{Period Doubling}
+		\caption{Period Doubling Diagram. Frequency and driving voltage varied. From table 8.1 in appendix.}
 		\label{fig:periodDoubling}
 	\end{figure}
 
@@ -96,14 +96,14 @@
 	\begin{figure}[h]
 		\centering
 		\input{plots/80khz}
-		\caption{80 kHz Bifurcation plot. $V_{\rm drive}$ error: 0.1 V. $V_{\rm R}$ error: 5 mV.}
+		\caption{80 kHz Bifurcation plot. $V_{\rm drive}$ error: 0.1 V. $V_{\rm R}$ error: 5 mV. From table 8.2 in appendix.}
 		\label{fig:80khzBifurcation}
 	\end{figure}
 
 	\begin{figure}[h]
 		\centering
 		\input{plots/100khz}
-		\caption{100 kHz Bifurcation plot. $V_{\rm drive}$ error: 0.1 V. $V_{\rm R}$ error: 5 mV.}
+		\caption{100 kHz Bifurcation plot. $V_{\rm drive}$ error: 0.1 V. $V_{\rm R}$ error: 5 mV. From table 8.3 in appendix}
 		\label{fig:100khzBifurcation}
 	\end{figure}
 	
@@ -154,28 +154,28 @@
 	\begin{figure}
 		\centering
 		\includegraphics{simulations/plotnu0120.png}
-		\caption{Simulation with $\nu=0.120$. One stable cycle.}
+		\caption{Simulation phase plane with $V_{O}=0.120$ Volts. One stable cycle.}
 		\label{fig:sim.0120}
 	\end{figure}
 	
 	\begin{figure}
 		\centering
 		\includegraphics{simulations/plot0210.pdf}
-		\caption{Simulation with $\nu=0.210$. Two stable cycles.}
+		\caption{Simulation phase plane with $V_{O}=0.210$. Two stable cycles.}
 		\label{fig:sim.0210}
 	\end{figure}
 
 	\begin{figure}
 		\centering
 		\includegraphics{simulations/plotnu0390.png}
-		\caption{Chaos at $\nu=0.390$. Chaos.}
+		\caption{Chaos at $V_{O}=0.390$. Chaos.}
 		\label{fig:sim.0390}
 	\end{figure}
 
 	\begin{figure}
 		\centering
 		\includegraphics{simulations/plotnu0460.png}
-		\caption{Simulation at $\nu=0.460$. Three stable cycles.}
+		\caption{Simulation phase plane at $V_{O}=0.460$. Three stable cycles.}
 		\label{fig:sim.0460}
 	\end{figure}
 
@@ -249,7 +249,7 @@ end
 			\hline
 			\input{data/general} 
 		\end{tabular}
-		\caption{Data for Bifurcation plot}
+		\caption{Data for Period Doubling Diagram. Used to generate figure 5.1}
 		\label{tab:bifurcation}
 	\end{table}
 
@@ -260,7 +260,7 @@ end
 			\hline
 			\input{data/80khz.2} 
 		\end{tabular}
-		\caption{Data for Bifurcation plot, 80 kHz}
+		\caption{Data for Bifurcation plot, 80 kHz. Used to generate figure 5.2}
 		\label{tab:80khz}
 	\end{table}
 
@@ -270,7 +270,7 @@ end
 			\hline
 			\input{data/100khz.2} 
 		\end{tabular}
-		\caption{Data for Bifurcation plot, 100 kHz}
+		\caption{Data for Bifurcation plot, 100 kHz. Used to generate figure 5.3}
 		\label{tab:100khz}
 	\end{table}
 
@@ -326,6 +326,26 @@ end
 % citations:
 % http://reference.wolfram.com/legacy/v5_2/Demos/Notebooks/ChaoticCircuit.html
 
+\begin{thebibliography}{9}
+
+\bibitem{rollins89}
+  Z. Su, W. Rollins, E. R. Hunt
+  Simulation and characterization of strange attractors in driven diode resonator systems.
+  Physical Review A 40, 2698-2705.
+  1989
+
+\bibitem{strogatz94}
+  Steven H. Strogatz,
+  Nonlinear Dynamics and Chaos.
+  Westview Press,
+  1994. p. 353-359, 369-374.
+  
+\bibitem{wolfram10}
+  Wolfram Research,
+  A Chaotic Circuit.
+  \url{http://reference.wolfram.com/legacy/v5_2/Demos/Notebooks/ChaoticCircuit.html}
+
+\end{thebibliography}
 
 \end{document}
 
